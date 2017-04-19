@@ -8,7 +8,9 @@ if (isset($_GET['id'])!='') {
  
   $id=mysqli_real_escape_string($connection,$_GET['id']);
 
+
   $search="SELECT tbl_project.Title,tbl_project.Description,tbl_project.Link,tbl_project.Tag,tbl_project.CourseID,tbl_course.CourseNo,tbl_project.TermID,tbl_term.Name,tbl_project.SessionID,tbl_project.CreationDate,tbl_project.ProjectDate FROM tbl_project,tbl_term,tbl_course,tbl_course_marks_setup WHERE tbl_project.ID='$id' and tbl_project.TermID=tbl_term.ID and tbl_project.CourseID=tbl_course.ID and tbl_project.SessionID=tbl_course_marks_setup.SessionID";
+
     $result = $connection->query($search);
 
     
@@ -19,6 +21,7 @@ if (isset($_GET['id'])!='') {
         $Link=$row['Link'];
         $Tag=$row['Tag'];
         $CourseID=$row['CourseID'];
+
         $CourseNo=$row['CourseNo'];
         $TermID=$row['TermID'];
         $Name=$row['Name'];
@@ -156,6 +159,7 @@ select{
 
         <tr>
           <td>
+
                <select id="select" type="text" name="CourseID" >
 
                <option value="<?php echo $CourseID ?>"> <?php echo $CourseNo ?> </option>
@@ -163,6 +167,7 @@ select{
              <?php
                 
                 $que = "SELECT * FROM tbl_course";
+
                 $res = mysqli_query($connection, $que);
                  while($row=mysqli_fetch_assoc($res)){                                                 
                  echo "<option value='".$row['ID']."'>".$row['CourseNo']."</option>";

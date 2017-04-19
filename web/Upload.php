@@ -81,11 +81,13 @@ select{
 
 </h1>
 
+
 <button name="center button" onclick="location.href='Main.php'" style="font-size:12pt;text-align: center;  color:black;background-color:white;border:2px solid #336600;padding:2px 15px;cursor:pointer; vertical-align:top; float: right">Home Page</button>
 
 <button name="center button" onclick="location.href='Search.php'" style="font-size:12pt;text-align: center;  color:black;background-color:white;border:2px solid #336600;padding:2px 15px;cursor:pointer; vertical-align:top; float: right">Next Page For Search</button>
 
 </header>
+
 
 
 

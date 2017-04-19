@@ -94,6 +94,7 @@ select{
 
 <h3>Search By</h3>
 
+
 <button name="center button" onclick="location.href='Main.php'" style="font-size:12pt;text-align: center;  color:black;background-color:white;border:2px solid #336600;padding:2px 15px;cursor:pointer; vertical-align:top; float: right">Home Page</button>
 
 <button name="center button" onclick="location.href='Upload.php'" style="font-size:12pt;text-align: center;  color:black;background-color:white;border:2px solid #336600;padding:2px 15px;cursor:pointer; vertical-align:top; float: right">Page For Upload</button>
